@@ -7,6 +7,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* Background Horizontal */
 @media (orientation: landscape) {
@@ -46,10 +48,11 @@ h2 {
   letter-spacing: -0.2vw;
 }
 h3 {
-  font-size: 1.5vw;
-  line-height: 2vw;
-  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: normal;
 }
+
 iframe {
   width: 100%;
   height: 600px;
@@ -79,59 +82,28 @@ iframe {
   justify-content: center;
 }
 
-.section#food-section {
-  border-color: #e36b0c;
-}
-.section#music-section {
-  border-color: #6228b4;
-}
-.section#drinks-section {
-  border-color: #dfac00;
-}
-.section#coworking-section {
-  border-color: #82b01e;
-}
-.section#lakes-section {
-  border-color: #3376cf;
-}
-.section#tourist-traps-section {
-  border-color: #470c0a;
-}
-.section#events-section {
-  border-color: #000;
-}
-.section#coffee-section {
-  border-color: #754719;
-}
 .section#food-section h3 {
   color: #e36b0c;
 }
 .section#music-section h3 {
-  border-color: #6228b4;
   color: #6228b4;
 }
 .section#drinks-section h3 {
-  border-color: #dfac00;
   color: #dfac00;
 }
 .section#coworking-section h3 {
-  border-color: #82b01e;
   color: #82b01e;
 }
 .section#lakes-section h3 {
-  border-color: #3376cf;
   color: #3376cf;
 }
 .section#tourist-traps-section h3 {
-  border-color: #470c0a;
   color: #470c0a;
 }
 .section#events-section h3 {
-  border-color: #000;
   color: #000;
 }
 .section#coffee-section h3 {
-  border-color: #754719;
   color: #754719;
 }
 
@@ -146,37 +118,45 @@ a.item {
 }
 
 .card {
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
   border-radius: 3rem;
-  padding: 2rem;
-  border: 10px solid;
   transition: transform 0.2s ease;
+  text-align: center;
+  padding: 3rem;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
 }
 
-.item p {
-  margin-top: auto;
-}
 p.intro {
-  font-size: 2vw;
-  max-width: 800px;
+  font-size: 20px;
+  width: 315px;
   margin: 5vw auto;
   text-align: center;
+  background-color: white;
+  border-radius: 3rem;
+  padding: 3rem;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+  transform: rotate(6deg);
+  position: relative;
+  z-index: 100;
+  margin: -4rem 5vw -5vw auto; /* overlap top, push to right */
 }
 
 h1#logo {
   width: 100%;
-  height: 400px;
+  height: 500px;
   margin: 0 auto;
   background-image: url("images/logo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   text-indent: -90000px;
+  z-index: 0;
 }
 
 h1,
@@ -233,66 +213,70 @@ h2#events {
 
 /* Enhanced scattered cards effect with staggered, pseudo-random pattern */
 .section .item:nth-child(3n + 1) .card {
-  transform: rotate(-5deg) scale(1.06) translate(6px, -8px);
+  transform: rotate(-5deg);
+}
+.section .item:nth-child(3n + 1) .card h3 {
+  font-family: "DynaPuff";
 }
 .section .item:nth-child(4n + 2) .card {
-  transform: rotate(8deg) scale(0.95) translate(-4px, 5px);
+  border-radius: 20px;
+  transform: rotate(8deg);
 }
+.section .item:nth-child(4n + 2) .card h3 {
+  font-family: "Pirata One";
+}
+
 .section .item:nth-child(5n + 3) .card {
-  transform: rotate(-3deg) scale(1.1) translate(10px, 2px);
+  transform: rotate(-3deg);
+}
+.section .item:nth-child(5n + 3) .card h3 {
+  font-family: "Spicy Rice";
 }
 .section .item:nth-child(6n + 4) .card {
-  transform: rotate(11deg) scale(0.9) translate(-8px, -6px);
+  transform: rotate(11deg);
+  border-radius: 100%;
 }
 .section .item:nth-child(7n + 5) .card {
-  transform: rotate(-10deg) scale(1.04) translate(3px, 6px);
+  border-radius: 0;
+  transform: rotate(-10deg);
+}
+.section .item:nth-child(7n + 5) .card h3 {
+  font-family: Caprasimo;
 }
 .section .item:nth-child(8n + 6) .card {
-  transform: rotate(2deg) scale(1.02) translate(7px, -3px);
+  transform: rotate(2deg);
+}
+.section .item:nth-child(8n + 6) .card h3 {
+  font-family: Plaster;
 }
 .section .item:nth-child(9n + 7) .card {
-  transform: rotate(-7deg) scale(0.97) translate(-5px, 9px);
+  border-radius: 20px;
+  transform: rotate(-7deg);
 }
 .section .item:nth-child(10n + 8) .card {
-  transform: rotate(6deg) scale(1.03) translate(5px, 1px);
+  transform: rotate(6deg);
+}
+.section .item:nth-child(10n + 8) .card h3 {
+  font-family: Michroma;
+  font-weight: 900;
 }
 .section .item:nth-child(11n + 9) .card {
-  transform: rotate(-12deg) scale(0.94) translate(-6px, -9px);
+  transform: rotate(-12deg);
 }
 .section .item:nth-child(12n + 10) .card {
-  transform: rotate(10deg) scale(1.08) translate(8px, 7px);
+  transform: rotate(10deg);
+  border-radius: 0;
 }
 
-.section#food-section .card {
-  border-color: #e36b0c;
-}
-.section#music-section .card {
-  border-color: #6228b4;
-}
-.section#drinks-section .card {
-  border-color: #dfac00;
-}
-.section#coworking-section .card {
-  border-color: #82b01e;
-}
-.section#lakes-section .card {
-  border-color: #3376cf;
-}
-.section#tourist-traps-section .card {
-  border-color: #470c0a;
-}
-.section#events-section .card {
-  border-color: #000;
-}
-.section#coffee-section .card {
-  border-color: #754719;
+.item:hover {
+  transform: scale(1.1);
 }
 
-.item:hover .card {
-  transform: scale(1.03);
+.section .item:hover .card {
+  transform: rotate(0deg);
 }
 
-.item:active .card {
-  transform: scale(0.98);
+.item:active {
+  transform: scale(1.05);
   transition: all 0.05s ease;
 }
