@@ -9,6 +9,7 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #546474;
 }
 /* Background Horizontal */
 @media (orientation: landscape) {
@@ -147,6 +148,16 @@ p.intro {
   margin: -4rem 5vw -5vw auto; /* overlap top, push to right */
 }
 
+p.intro strong {
+  font-size: 16px;
+  color: #5555ff;
+}
+
+p.intro a {
+  text-decoration: underline;
+  color: inherit;
+}
+
 h1#logo {
   width: 100%;
   height: 500px;
@@ -266,6 +277,27 @@ h2#events {
 .section .item:nth-child(12n + 10) .card {
   transform: rotate(10deg);
   border-radius: 0;
+}
+.section .item:nth-child(9) .card,
+.section .item:nth-child(17) .card {
+  transform: rotate(13deg);
+  border-radius: 16px;
+}
+
+.section .item:nth-child(9) .card h3,
+.section .item:nth-child(17) .card h3 {
+  font-family: "Bebas Neue";
+}
+.section .item:nth-child(11) .card,
+.section .item:nth-child(15) .card {
+  transform: rotate(13deg);
+  border-radius: 16px;
+}
+
+.section .item:nth-child(11) .card h3,
+.section .item:nth-child(15) .card h3 {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
 }
 
 .item:hover {
